@@ -1,0 +1,4 @@
+{
+  "name": "ndi_tracker",
+  "dependencies": ["cisst", "sawNDITrackerAll"]
+}
