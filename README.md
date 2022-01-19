@@ -1,8 +1,8 @@
 # sawNDITrackerROS2
 
-ROS 2 node for sawNDITracker.  This code requires to have the [sawNDITracker](https://github.com/jhu-saw/sawNDITracker) main component already compiled and installed.
+ROS 2 node for sawNDITracker (https://github.com/jhu-saw/sawNDITracker).
 
-Once sawNDITracker is compiled, you can use the ROS 2 VCS python-based tool (`sudo apt install python3-vcstool`) to download all the ROS 2 specific packages needed for the sawNDITracker ROS 2 node.  Look for the `.repos` file in this repository and find a the link to the raw content.  Then in your ROS 2 workspace, under the `src` directory, use:
+You can use the ROS 2 VCS python-based tool (`sudo apt install python3-vcstool`) to download all the cisst, sawNDITracker and ROS 2 specific packages needed for the sawNDITracker ROS 2 node.  Look for the `.repos` file in this repository and find the link to the raw content.  Then in your ROS 2 workspace, under the `src` directory, use:
 ```sh
 vcs import --input https://raw.githubusercontent.com/jhu-saw/sawNDITrackerROS2/main/ndi_tracker.repos
 ```
