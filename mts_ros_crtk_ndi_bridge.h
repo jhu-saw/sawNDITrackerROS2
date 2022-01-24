@@ -5,7 +5,7 @@
   Author(s):  Anton Deguet
   Created on: 2017-11-28
 
-  (C) Copyright 2017-2020 Johns Hopkins University (JHU), All Rights Reserved.
+  (C) Copyright 2017-2022 Johns Hopkins University (JHU), All Rights Reserved.
 
 --- begin cisst license - do not edit ---
 
@@ -19,9 +19,9 @@ http://www.cisst.org/cisst/license.txt.
 #ifndef _mts_ros_crtk_ndi_bridge_h
 #define _mts_ros_crtk_ndi_bridge_h
 
-#include <cisst_ros2_crtk/mts_ros_crtk_bridge.h>
+#include <cisst_ros2_crtk/mts_ros_crtk_bridge_provided.h>
 
-class mts_ros_crtk_ndi_bridge: public mts_ros_crtk_bridge
+class mts_ros_crtk_ndi_bridge: public mts_ros_crtk_bridge_provided
 {
     CMN_DECLARE_SERVICES(CMN_NO_DYNAMIC_CREATION, CMN_LOG_ALLOW_DEFAULT);
 
@@ -29,7 +29,7 @@ class mts_ros_crtk_ndi_bridge: public mts_ros_crtk_bridge
     inline mts_ros_crtk_ndi_bridge(const std::string & _component_name,
                                    std::shared_ptr<rclcpp::Node> _node,
                                    const double _period_in_seconds = 5.0 * cmn_ms):
-        mts_ros_crtk_bridge(_component_name, _node, _period_in_seconds)
+        mts_ros_crtk_bridge_provided(_component_name, _node, _period_in_seconds)
     {}
 
     inline ~mts_ros_crtk_ndi_bridge() {}
